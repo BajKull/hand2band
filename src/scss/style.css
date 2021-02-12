@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.searchBox,
+.searchBoxGray {
+  position: relative;
+  border: 0;
+  background: white;
+  border-radius: 5px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.searchBox .searchBoxIcon,
+.searchBoxGray .searchBoxIcon {
+  width: 25px;
+  padding: 15px;
+  stroke: #646464;
+  -webkit-transition: stroke 0.2s;
+  transition: stroke 0.2s;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.searchBox .searchBoxIcon:hover,
+.searchBoxGray .searchBoxIcon:hover {
+  stroke: black;
+}
+
+.searchBox .searchBoxClose,
+.searchBoxGray .searchBoxClose {
+  width: 25px;
+  padding: 15px;
+  stroke: #646464;
+  -webkit-transition: stroke 0.2s;
+  transition: stroke 0.2s;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.searchBox .searchBoxClose:hover,
+.searchBoxGray .searchBoxClose:hover {
+  stroke: black;
+}
+
+.searchBox .searchBoxContainer,
+.searchBoxGray .searchBoxContainer {
+  width: 90%;
+}
+
+.searchBox .searchBoxInput,
+.searchBoxGray .searchBoxInput {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  padding-left: 55px;
+  padding-right: 55px;
+  background: 0;
+}
+
+.searchBox .searchBoxInput::-webkit-input-placeholder,
+.searchBoxGray .searchBoxInput::-webkit-input-placeholder {
+  color: #646464;
+}
+
+.searchBox .searchBoxInput:-ms-input-placeholder,
+.searchBoxGray .searchBoxInput:-ms-input-placeholder {
+  color: #646464;
+}
+
+.searchBox .searchBoxInput::-ms-input-placeholder,
+.searchBoxGray .searchBoxInput::-ms-input-placeholder {
+  color: #646464;
+}
+
+.searchBox .searchBoxInput::placeholder,
+.searchBoxGray .searchBoxInput::placeholder {
+  color: #646464;
+}
+
+.searchBox .searchBoxInput:focus,
+.searchBoxGray .searchBoxInput:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+.searchBox .searchBoxAutocomplete,
+.searchBoxGray .searchBoxAutocomplete {
+  position: absolute;
+  background-color: white;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 0;
+  z-index: 5;
+  border: 1px solid #e6e6e6;
+}
+
+.searchBox .searchBoxAutocomplete a,
+.searchBoxGray .searchBoxAutocomplete a {
+  color: black;
+  text-decoration: none;
+}
+
+.searchBox .searchBoxAutocomplete .searchBoxAutocompleteElement,
+.searchBoxGray .searchBoxAutocomplete .searchBoxAutocompleteElement {
+  padding: 15px;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.searchBox .searchBoxAutocomplete .searchBoxAutocompleteElement:hover,
+.searchBoxGray .searchBoxAutocomplete .searchBoxAutocompleteElement:hover {
+  background-color: #f0f0f0;
+}
+
+.searchBoxGray {
+  height: 40px;
+  width: 60%;
+  margin: 25px auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .searchBoxGray {
+    width: 100%;
+  }
+}
+
+.searchBoxGray .searchBoxIcon,
+.searchBoxGray .searchBoxClose {
+  width: 20px;
+  padding: 10px;
+}
+
+.searchBoxGray .searchBoxInput {
+  border: 1px solid #f0f0f0;
+  background: #f0f0f0;
+  border-radius: 20px;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+
+.searchBoxGray .searchBoxInput:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.landing .content {
+  width: 75%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .landing .content {
+    width: 90%;
+  }
+}
+
+.landing .landingBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.landing .landingBackgroundCover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: -4;
+}
+
+.landing .landingName {
+  font-size: 3.5em;
+  font-weight: 500;
+  margin-top: 20vh;
+  margin-bottom: 0.75em;
+}
+
+.landing .landingTitle,
+.landing .landingSubtitle {
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
+.landing .landingTitle {
+  margin-bottom: 0.5em;
+}
+
+.landing .landingTitle .landingTitleLink {
+  color: gainsboro;
+  text-decoration: underline;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.landing .landingTitle .landingTitleLink:hover {
+  color: white;
+}
+
+.landing .landingSubtitle {
+  margin-bottom: 2em;
+}
+
+.landing .searchBox {
+  margin-bottom: 2em;
+}
+
+.search {
+  width: 90%;
+  margin: auto;
+}
+
+.search .searchText {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.search .searchText::first-letter {
+  text-transform: uppercase;
+}
+
+.search .tags {
+  margin-top: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.search .tags a {
+  text-decoration: none;
+  color: black;
+  margin-right: 25px;
+}
+
+.search .tags .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #d2d2d2;
+  color: #787878;
+  border-radius: 5px;
+  min-width: 180px;
+  width: 180px;
+  height: 45px;
+  -webkit-transition: border 0.2s, color 0.2s;
+  transition: border 0.2s, color 0.2s;
+}
+
+.search .tags .tag:hover {
+  border: 1px solid #646464;
+  color: #646464;
+}
+
+.search .tags .fadeoutDiv {
+  width: 5%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(white));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, white 100%);
+  right: 0;
+}
+
+.pics {
+  margin-top: 75px;
+  margin-bottom: 100px;
+  line-height: 0;
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .pics {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .pics {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
+.pics .hidden {
+  opacity: 0;
+}
+
+.pics .pic {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  position: relative;
+  min-height: 15vw;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.pics .pic .picTags {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: -35px;
+}
+
+.pics .pic .picTags .picTag {
+  padding: 10px 15px;
+  background-color: #e6e6e6;
+  color: #969696;
+  margin-right: 10px;
+  border-radius: 2px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.pics .pic img {
+  width: 100%;
+  height: auto;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modalBackground {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.modal .modalContent {
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  height: 95%;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal .modalContent {
+    width: 90%;
+  }
+}
+
+.modal .modalContent .modalIcon {
+  width: 18px;
+  height: 18px;
+  padding: 7px 15px;
+  border-radius: 5px;
+  fill: #787878;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+  cursor: pointer;
+}
+
+.modal .modalContent .modalIcon:hover {
+  fill: #5a5a5a;
+}
+
+.modal .modalContent .topBar {
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  margin: 25px auto;
+}
+
+@media only screen and (max-width: 350px) {
+  .modal .modalContent .topBar {
+    font-size: 0.75em;
+  }
+}
+
+.modal .modalContent .topBar .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modalContent .topBar .author .authorName {
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 350px) {
+  .modal .modalContent .topBar .author .authorName {
+    font-size: 0.75em;
+  }
+}
+
+.modal .modalContent .topBar .author .authorUsername {
+  font-weight: 500;
+  font-size: 0.7em;
+  margin-left: 15px;
+  color: #646464;
+}
+
+@media only screen and (max-width: 350px) {
+  .modal .modalContent .topBar .author .authorUsername {
+    margin-top: 2px;
+    font-size: 0.6em;
+  }
+}
+
+.modal .modalContent .topBar .author img {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
+.modal .modalContent .topBar .likes {
+  margin-left: auto;
+}
+
+.modal .modalContent .topBar .modalIcon {
+  border: 1px solid #d7d7d7;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 350px) {
+  .modal .modalContent .topBar .modalIcon {
+    padding: 5px 10px;
+  }
+}
+
+.modal .modalContent .modalImage {
+  display: block;
+  margin: auto;
+  height: calc(100% - 164px);
+  max-width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal .modalContent .bottomBar {
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  margin: 25px auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal .modalContent .bottomBar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .modal .modalContent .bottomBar {
+    margin: 15px auto;
+  }
+}
+
+.modal .modalContent .bottomBar .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modalContent .bottomBar .location .modalIcon {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.modal .modalContent .bottomBar .location .locationName {
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal .modalContent .bottomBar .location .locationName {
+    font-size: 0.75em;
+  }
+}
+
+.modal .modalContent .bottomBar .share {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modalContent .bottomBar .share .shareButton {
+  background: 0;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  color: #787878;
+  margin-left: 10px;
+  text-transform: capitalize;
+  -webkit-transition: border 0.2s;
+  transition: border 0.2s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal .modalContent .bottomBar .share .shareButton {
+    width: 75px;
+  }
+  .modal .modalContent .bottomBar .share .shareButton .modalIcon {
+    width: 14px;
+    height: 14px;
+    padding: 5px 6px;
+  }
+}
+
+.modal .modalContent .bottomBar .share .shareButton:hover {
+  border: 1px solid #5a5a5a;
+  color: #5a5a5a;
+  cursor: pointer;
+}
+
+.modal .modalContent .bottomBar .share .shareButton:hover .modalIcon {
+  fill: #5a5a5a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

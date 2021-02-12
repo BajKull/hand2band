@@ -1,0 +1,180 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modalBackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    cursor: zoom-out;
+  }
+
+  .modalContent {
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    height: 95%;
+
+    @include breakpoint(600px) {
+      width: 90%;
+    }
+
+    .modalIcon {
+      width: 18px;
+      height: 18px;
+      padding: 7px 15px;
+      border-radius: 5px;
+      fill: rgb(120, 120, 120);
+      transition: fill 0.2s;
+      cursor: pointer;
+      &:hover {
+        fill: rgb(90, 90, 90);
+      }
+    }
+
+    .topBar {
+      height: 32px;
+      display: flex;
+      width: 95%;
+      margin: 25px auto;
+
+      @include breakpoint(350px) {
+        font-size: 0.75em;
+      }
+
+      .author {
+        display: flex;
+
+        .authorName {
+          font-weight: 500;
+          font-size: 1em;
+          margin-left: 15px;
+
+          @include breakpoint(350px) {
+            font-size: 0.75em;
+          }
+        }
+
+        .authorUsername {
+          font-weight: 500;
+          font-size: 0.7em;
+          margin-left: 15px;
+          color: rgb(100, 100, 100);
+
+          @include breakpoint(350px) {
+            margin-top: 2px;
+            font-size: 0.6em;
+          }
+        }
+
+        img {
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+        }
+      }
+
+      .likes {
+        margin-left: auto;
+      }
+
+      .modalIcon {
+        border: 1px solid rgb(215, 215, 215);
+        margin-left: 10px;
+        @include breakpoint(350px) {
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .modalImage {
+      display: block;
+      margin: auto;
+      height: calc(100% - 164px);
+      max-width: 90%;
+      object-fit: cover;
+    }
+
+    .bottomBar {
+      height: 32px;
+      display: flex;
+      width: 95%;
+      margin: 25px auto;
+
+      @include breakpoint(600px) {
+        flex-wrap: wrap;
+      }
+      @include breakpoint(300px) {
+        margin: 15px auto;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+
+        .modalIcon {
+          padding: 5px;
+          margin-right: 5px;
+        }
+
+        .locationName {
+          font-weight: 500;
+          @include breakpoint(600px) {
+            font-size: 0.75em;
+          }
+        }
+      }
+
+      .share {
+        margin-left: auto;
+        display: flex;
+
+        .shareButton {
+          background: 0;
+          border: 1px solid rgb(215, 215, 215);
+          border-radius: 5px;
+          display: flex;
+          width: 100px;
+          align-items: center;
+          font-weight: 600;
+          color: rgb(120, 120, 120);
+          margin-left: 10px;
+          text-transform: capitalize;
+          transition: border 0.2s;
+          justify-content: center;
+
+          @include breakpoint(600px) {
+            width: 75px;
+
+            .modalIcon {
+              width: 14px;
+              height: 14px;
+              padding: 5px 6px;
+            }
+          }
+
+          &:hover {
+            border: 1px solid rgb(90, 90, 90);
+            color: rgb(90, 90, 90);
+            cursor: pointer;
+
+            .modalIcon {
+              fill: rgb(90, 90, 90);
+            }
+          }
+        }
+      }
+    }
+  }
+}

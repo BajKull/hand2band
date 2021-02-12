@@ -1,0 +1,120 @@
+.searchBox,
+.searchBoxGray {
+  position: relative;
+  border: 0;
+  background: white;
+  border-radius: 5px;
+  height: 55px;
+  display: flex;
+
+  .searchBoxIcon {
+    width: 25px;
+    padding: 15px;
+    stroke: rgb(100, 100, 100);
+    transition: stroke 0.2s;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &:hover {
+      stroke: black;
+    }
+  }
+
+  .searchBoxClose {
+    width: 25px;
+    padding: 15px;
+    stroke: rgb(100, 100, 100);
+    transition: stroke 0.2s;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+      stroke: black;
+    }
+  }
+
+  .searchBoxContainer {
+    width: 90%;
+  }
+
+  .searchBoxInput {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: color 0.2s;
+    padding-left: 55px;
+    padding-right: 55px;
+    background: 0;
+
+    &::placeholder {
+      color: rgb(100, 100, 100);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .searchBoxAutocomplete {
+    position: absolute;
+    background-color: white;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 5;
+    border: 1px solid rgb(230, 230, 230);
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .searchBoxAutocompleteElement {
+      padding: 15px;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: rgb(240, 240, 240);
+      }
+    }
+  }
+}
+
+.searchBoxGray {
+  height: 40px;
+  width: 60%;
+  margin: 25px auto;
+
+  @include breakpoint(700px) {
+    width: 100%;
+  }
+
+  .searchBoxIcon,
+  .searchBoxClose {
+    width: 20px;
+    padding: 10px;
+  }
+
+  .searchBoxInput {
+    border: 1px solid rgb(240, 240, 240);
+    background: rgb(240, 240, 240);
+    border-radius: 20px;
+
+    transition: background-color 0.1s;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background: none;
+    }
+  }
+}

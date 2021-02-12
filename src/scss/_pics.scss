@@ -1,0 +1,50 @@
+.pics {
+  margin-top: 75px;
+  margin-bottom: 100px;
+  line-height: 0;
+  column-count: 3;
+  column-gap: 25px;
+
+  @include breakpoint(1200px) {
+    column-count: 2;
+  }
+
+  @include breakpoint(700px) {
+    column-count: 1;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .pic {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    position: relative;
+    min-height: 15vw;
+    transition: opacity 0.25s;
+
+    .picTags {
+      position: absolute;
+      display: flex;
+      bottom: -35px;
+
+      .picTag {
+        padding: 10px 15px;
+        background-color: rgb(230, 230, 230);
+        color: rgb(150, 150, 150);
+        margin-right: 10px;
+        border-radius: 2px;
+        font-size: 0.85em;
+        font-weight: 500;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      cursor: zoom-in;
+    }
+  }
+}
